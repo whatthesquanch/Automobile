@@ -73,13 +73,14 @@ public class AutomobileInventory {
 		 }
 		 // Method to print information to a file
 		 public static void printToFile(String[] vehicleInfo) {
+		 String fileName = "AutoInventory.txt"; {
 			 try {
-				 FileWriter writer = new FileWriter("C:\\Temp\\Autos.txt");
+				 FileWriter writer = new FileWriter(fileName);
 				 for (String info : vehicleInfo) {
 					 writer.write(info + "\n");
 				 }
 				 writer.close();
-				 System.out.println("File printed successfully at: C:\\Temp\\Autos.txt");
+				 System.out.println("File printed successfully at:" + fileName);
 				 
 			 } catch (IOException e) {
 				 // Handle any IOException
@@ -89,4 +90,5 @@ public class AutomobileInventory {
 
 	}
 
+		 }
 }
